@@ -1,0 +1,82 @@
+DEFAULT vesamenu.c32
+TIMEOUT 600
+MENU TITLE PXE BOOT MENU
+
+LABEL EaseUS
+MENU LABEL EaseUS Partition Master 11.9 WinPE
+LINUX memdisk
+INITRD easeuspart.iso
+APPEND iso
+MENU DEFAULT
+
+LABEL AcronisMedia
+MENU LABEL Acronis Media
+LINUX memdisk
+INITRD AcronisMedia.iso
+APPEND iso
+
+LABEL AcronisMedia2016
+MENU LABEL Acronis Media 2016
+LINUX memdisk
+INITRD AcronisTrueImage2016Multilingual.iso
+APPEND iso
+
+LABEL CloneZilla
+MENU LABEL CloneZilla Live x64
+LINUX memdisk
+INITRD clonezilla-live-2.4.2-32-amd64.iso
+APPEND iso
+
+LABEL KIS
+MENU LABEL KIS rescue
+LINUX memdisk
+INITRD kav_rescue_10.iso
+APPEND iso
+
+LABEL tetros
+MENU LABEL tetros
+KERNEL tetros.bss
+
+LABEL HIREN
+MENU LABEL Hirens's boot CD 15.2
+LINUX memdisk
+INITRD Hirens.BootCD.15.2.iso
+APPEND iso
+
+LABEL WinPE
+MENU LABEL Windows RE x64
+KERNEL pxeboot.0
+
+LABEL MHDD
+MENU LABEL MHDD 4.6
+LINUX memdisk
+INITRD mhdd32ver4.6.iso
+APPEND iso
+
+LABEL UBCD
+MENU LABEL Ultimate Boot CD
+LINUX memdisk
+INITRD ubcd535.iso
+APPEND iso
+
+LABEL ALR
+MENU LABEL alr Boot CD
+LINUX memdisk
+INITRD alr.iso
+APPEND iso
+
+LABEL TFTPSRCD
+MENU LABEL SystemRescueCd tftp
+LINUX memdisk
+INITRD systemrescuecd-x86-5.0.4.iso
+APPEND iso
+
+LABEL IPXESRCD
+MENU LABEL SystemRescueCd
+KERNEL ipxe/ipxe.lkrn
+INITRD ipxe/SRCD.ipxe
+
+LABEL ISCSI
+MENU LABEL ISCSI test
+KERNEL ipxe/ipxe.lkrn
+INITRD ipxe/iscsi-disk1.ipxe
